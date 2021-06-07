@@ -1,10 +1,12 @@
+const title = process.env.TITLE
+
 export default {
   /*
    ** Headers of the page
    ** Doc: https://vue-meta.nuxtjs.org/api/#metainfo-properties
    */
   head: {
-    title: "Nuxt.js starter for CSB",
+    title: title ? title : 'default title',
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -33,5 +35,7 @@ export default {
    ** Plugins to load before mounting the App
    ** Doc: https://nuxtjs.org/docs/2.x/directory-structure/plugins
    */
-  plugins: []
+  plugins: [],
+
+  serverMiddleware: ['~/serverMiddleware/selectiveSSR.js']
 };
