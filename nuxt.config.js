@@ -1,12 +1,10 @@
-const title = process.env.TITLE
-
 export default {
   /*
    ** Headers of the page
    ** Doc: https://vue-meta.nuxtjs.org/api/#metainfo-properties
    */
   head: {
-    title: title ? title : 'default title',
+    title: process.env.TITLE,
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
